@@ -11,16 +11,17 @@ import {
   UsePipes,
   UseFilters,
 } from '@nestjs/common';
-import { EventsService } from '@app/core/events/events.service';
+
 import { CreateEventRequest } from './request/create-event.request';
 import { UpdateEventRequest } from './request/update-event.request';
 import { ReserveSpotRequest } from './request/reserve-spot.request';
-import { AuthGuard } from '@app/core/auth/auth.guard';
-import { ZodValidationPipe } from '../validator/ZodValidationPipe';
+import { ZodValidationPipe } from '../../validator/ZodValidationPipe';
 import { createEventSchema } from './validator/create-event.schema-validator';
 import { reserveSpotsSchema } from './validator/reserve-spots.schema-validator';
-import { HttpExceptionFilter } from '../filters/http-exception.filter';
+import { HttpExceptionFilter } from '../../filters/http-exception.filter';
 import { UseZodGuard } from 'nestjs-zod';
+import { AuthGuard } from '../auth/auth.guard';
+import { EventsService } from './events.service';
 
 @Controller('events')
 export class EventsController {

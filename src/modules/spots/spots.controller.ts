@@ -7,12 +7,13 @@ import {
   Param,
   Delete,
 } from '@nestjs/common';
-import { SpotsService } from '@app/core/spots/spots.service';
+
+import { UseZodGuard } from 'nestjs-zod';
+
 import { CreateSpotRequest } from './request/create-spot.request';
 import { UpdateSpotRequest } from './request/update-spot.request';
 import { createSpotSchema } from './validator/create-spots.schema-validator';
-
-import { UseZodGuard } from 'nestjs-zod';
+import { SpotsService } from './spots.service';
 
 @Controller('events/:eventId/spots')
 export class SpotsController {

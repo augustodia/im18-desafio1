@@ -5,8 +5,8 @@ import { PrismaService } from '../prisma/prisma.service';
 import { ReserveSpotDto } from './dto/reserve-spot.dto';
 import { CreateEventDto } from './dto/create-event.dto';
 import { UpdateEventDto } from './dto/update-event.dto';
-import { DomainValidationError } from '../errors/domain-validation.error';
-import { PrismaError } from '../errors/prisma.error';
+import { DomainValidationError } from '../../errors/domain-validation.error';
+import { PrismaError } from '../../errors/prisma.error';
 
 @Injectable()
 export class EventsService {

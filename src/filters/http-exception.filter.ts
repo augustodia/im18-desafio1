@@ -2,8 +2,8 @@ import { ExceptionFilter, Catch, ArgumentsHost } from '@nestjs/common';
 import { Response } from 'express';
 import { ZodValidationException } from 'nestjs-zod';
 import { ZodError } from 'zod';
-import { DomainValidationError } from '../../../../libs/core/src/errors/domain-validation.error';
-import { PrismaError } from '../../../../libs/core/src/errors/prisma.error';
+import { DomainValidationError } from '../errors/domain-validation.error';
+import { PrismaError } from '../errors/prisma.error';
 
 @Catch()
 export class HttpExceptionFilter implements ExceptionFilter {

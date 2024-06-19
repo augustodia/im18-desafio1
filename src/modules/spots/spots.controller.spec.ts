@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { SpotsController } from './spots.controller';
-import { SpotsService } from '../../../../libs/core/src';
+import { SpotsService } from './spots.service';
 
 describe('SpotsController', () => {
   let controller: SpotsController;

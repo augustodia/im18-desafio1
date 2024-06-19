@@ -3,7 +3,7 @@ import { CreateSpotDto } from './dto/create-spot.dto';
 import { UpdateSpotDto } from './dto/update-spot.dto';
 import { PrismaService } from '../prisma/prisma.service';
 import { SpotStatus } from '@prisma/client';
-import { DomainValidationError } from '../errors/domain-validation.error';
+import { DomainValidationError } from '../../errors/domain-validation.error';
 
 @Injectable()
 export class SpotsService {
