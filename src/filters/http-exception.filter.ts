@@ -13,15 +13,13 @@ export class HttpExceptionFilter implements ExceptionFilter {
 
     console.log(exception);
     if (exception instanceof ZodValidationException) {
-      return response.status(402).json({
-        statusCode: 402,
-        message: 'Bad Request',
-        errors: exception.getZodError().issues,
+      return response.status(422).json({
+        message: exception.getZodError().issues,
       });
     }
 
     if (exception instanceof ZodError) {
-      return response.status(402).json({
+      return response.status(422).json({
         message: exception.issues,
       });
     }
